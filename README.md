@@ -2,7 +2,7 @@
 This boilerplate project demonstrates how to render VueJS components in a FastAPI web application using Jinja2.
 
 ## Overview
-This project demonstrates how to integrate VueJS with a Flask & FastAPI web application using Jinja2. The core concept is to copy the static build output from the VueJS project into the static resources folder of the Spring Boot application. React components are rendered by attaching multiple root elements to corresponding HTML DOM nodes, each identified by an `section-*` prefix.
+This project demonstrates how to integrate VueJS with a FastAPI web application using Jinja2. The core concept is to copy the static build output from the VueJS project into the static resources folder of the FastAPI application. Vue components are rendered by attaching multiple root elements to corresponding HTML DOM nodes, each identified by an `section-*` prefix.
 
 ## Technologies
 * Backend
