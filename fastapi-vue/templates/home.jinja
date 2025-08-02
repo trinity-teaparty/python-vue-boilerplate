@@ -1,10 +1,9 @@
 {% extends "default.html" %}
 {% block head %}
-    <title>Production - Vue with FastAPI</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    {{ super() }}
+    <title>Vue with FastAPI</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}">
 {% endblock %}
-{% block body %}
-    <div id="app"></div>
-    <script src="{{ url_for('static', filename='js/chunk-vendors.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% block body_section %}
+    <div id="section-hello-world"></div>
 {% endblock %}

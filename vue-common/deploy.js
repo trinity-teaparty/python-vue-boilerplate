@@ -18,6 +18,10 @@ function copyDirectorySync(source, destination) {
   const files = fs.readdirSync(source);
 
   for (const file of files) {
+    if (file === 'index.html'
+      || file.endsWith('.map')
+    ) continue;
+
     const sourcePath = path.join(source, file);
     const destinationPath = path.join(destination, file);
 

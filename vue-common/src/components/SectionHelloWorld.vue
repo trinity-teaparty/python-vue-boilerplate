@@ -1,20 +1,23 @@
+<!-- components/SectionHelloWorld.vue -->
 <template>
-  <SectionHelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="hello-world">
+    <h1>{{ msg }}</h1>
+  </div>
 </template>
 
 <script>
-import SectionHelloWorld from './components/SectionHelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    SectionHelloWorld
+  props: {
+    msg: {
+      type: String,
+      default: 'Hello Vue + Fast API!'
+    }
   }
 }
 </script>
 
 <style>
-#app {
+#hello-world {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

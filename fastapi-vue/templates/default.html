@@ -5,17 +5,22 @@
     <title>FastAPI + Vue App</title>
 
     <link rel="icon" href="{{ url_for('static', path='favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}">
+
+    {% if not settings.USE_BUNDLE_PROXY %}
+        <link rel="stylesheet" href="{{ url_for('static', path='css/app.css') }}">
+    {% endif %}
 
 </head>
 <body>
-    <div id="app">
-        {% block content %}
-        <h1>Welcome to FastAPI + Vue</h1>
-        {% endblock %}
-    </div>
+    {% block body_section %}{% endblock %}
 
-    <script src="{{ url_for('static', path='js/chunk-vendors.js') }}"></script>
-    <script src="{{ url_for('static', path='js/app.js') }}"></script>
+    {% if settings.USE_BUNDLE_PROXY %}
+        <script src="{{ url_for('static', path='js/chunk-vendors.js') }}"></script>
+        <script src="{{ url_for('static', path='js/app.js') }}"></script>
+    {% else %}
+        <script type="module" src="{{ url_for('static', path='js/chunk-vendors.js') }}"></script>
+        <script type="module" src="{{ url_for('static', path='js/app.js') }}"></script>
+    {% endif %}
+
 </body>
 </html>

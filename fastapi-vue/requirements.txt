@@ -2,3 +2,4 @@ fastapi
 jinja2
 httpx
 uvicorn
+dotenv
