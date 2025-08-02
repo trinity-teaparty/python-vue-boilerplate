@@ -64,3 +64,5 @@ python3 main.py
 
 ## Related Projects
 * https://github.com/rheech/spring-boot-vue-boilerplate
+* https://github.com/AkiaCode/python-react-boilerplate
+* https://github.com/trinity-teaparty/spring-boot-vue-boilerplate
